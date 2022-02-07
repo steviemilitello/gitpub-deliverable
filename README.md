@@ -32,6 +32,8 @@ Make a pub app that displays data inside server-side rendered views.
 
 **In terminal, inside your homework folder**:
 
+- fork and clone this repository into your `deliverables` folder
+- cd into this repo
 - `mkdir gitpub`
 - `cd gitpub`
 - `mkdir views`
@@ -39,10 +41,12 @@ Make a pub app that displays data inside server-side rendered views.
 - `mkdir models`
 - `touch models/drinks.js`
 - `touch server.js`
+- `touch .gitignore`
 - `npm init`
   - follow the `npm init` prompts
   - _thought question:_ does npm init create a file? if it does, where does it create it and what is the name of the file?
 - `code .`
+- add `node_modules` to `.gitignore`
 
 **Make sure you did it right**:
 
@@ -333,10 +337,6 @@ An express app that meets all the user stories outlined in the beginning of this
 ## Technical Requirements
 
 1. Your app MUST run without syntax errors. If there are errors you can't solve, comment them out and leave a comment above explaining what is wrong
-
-## Submission Guidelines
-
-- Submit your homework via the homework submission form pinned to the classroom channel
 
 ## Etc.
 

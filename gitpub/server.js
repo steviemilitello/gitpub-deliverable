@@ -20,9 +20,11 @@ app.get('/', (req, res) => {
     res.send('Welcome to the Gitpub App!')
 })
 
+// INDEX route for drinks 
 app.get('/drinks', (req, res) => {
     reqLog(req)
-    res.send(drinks)
+    // res.send(drinks)
+    res.render('index', {drink: drinks})
 })
 
 app.listen(port, () => {

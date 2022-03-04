@@ -1,8 +1,7 @@
 const express = require('express')
-
 const app = require('liquid-express-views')(express())
-
 const port = 3000
+const drinks = require('./models/drinks.js')
 
 const reqLog = (req) => {
     console.log('===========================')
@@ -12,9 +11,6 @@ const reqLog = (req) => {
     console.log('===========================')
 }
 
-const drinks = require('./models/drinks.js')
-console.log('these are our drinks,', drinks)
-
 app.get('/', (req, res) => {
     reqLog(req)
     res.send('Welcome to the Gitpub App!')
@@ -22,9 +18,14 @@ app.get('/', (req, res) => {
 
 // INDEX route for drinks 
 app.get('/drinks', (req, res) => {
-    reqLog(req)
     // res.send(drinks)
     res.render('index', {drink: drinks})
+})
+
+// SHOW route for drinks 
+
+app.get('drinks/:id', (req, res) => {
+    res.render('show', {drink: drinks[req.params.id]})
 })
 
 app.listen(port, () => {

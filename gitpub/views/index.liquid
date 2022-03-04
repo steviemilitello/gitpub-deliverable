@@ -8,5 +8,12 @@
 </head>
 <body>
     <h1>Welcome to GitPub</h1>
+    <ul>
+        {% for drink in drinks %}
+        <li>
+            <a href="/drinks/{{ forloop.index0 }}">{{drink.name | capitalize }}</a>
+        </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
